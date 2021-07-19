@@ -13,7 +13,7 @@ describe('Async component', () => {
 
         // const listItemElement = screen.getAllByRole('listitem');
         // getAllByRole will throw an error because of fetch call..
-        // instead of use findAllByRole
+        // instead of use findAllByRole which returns a promise...
 
         const listItemElement = await screen.findAllByRole('listitem');
         expect(listItemElement).not.toHaveLength(0);
